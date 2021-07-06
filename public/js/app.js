@@ -21068,13 +21068,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
-/* harmony import */ var _module_jquery__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./module/jquery */ "./resources/js/module/jquery.js");
-/* harmony import */ var _module_jquery__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_module_jquery__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _vendor_phpunit_php_code_coverage_src_Report_Html_Renderer_Template_js_bootstrap_min_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../vendor/phpunit/php-code-coverage/src/Report/Html/Renderer/Template/js/bootstrap.min.js */ "./vendor/phpunit/php-code-coverage/src/Report/Html/Renderer/Template/js/bootstrap.min.js");
-/* harmony import */ var _vendor_phpunit_php_code_coverage_src_Report_Html_Renderer_Template_js_bootstrap_min_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_vendor_phpunit_php_code_coverage_src_Report_Html_Renderer_Template_js_bootstrap_min_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _vendor_phpunit_php_code_coverage_src_Report_Html_Renderer_Template_js_popper_min_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../vendor/phpunit/php-code-coverage/src/Report/Html/Renderer/Template/js/popper.min.js */ "./vendor/phpunit/php-code-coverage/src/Report/Html/Renderer/Template/js/popper.min.js");
-/* harmony import */ var _vendor_phpunit_php_code_coverage_src_Report_Html_Renderer_Template_js_popper_min_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_vendor_phpunit_php_code_coverage_src_Report_Html_Renderer_Template_js_popper_min_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _components_ExampleComponent_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue");
+/* harmony import */ var _vendor_phpunit_php_code_coverage_src_Report_Html_Renderer_Template_js_bootstrap_min_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../vendor/phpunit/php-code-coverage/src/Report/Html/Renderer/Template/js/bootstrap.min.js */ "./vendor/phpunit/php-code-coverage/src/Report/Html/Renderer/Template/js/bootstrap.min.js");
+/* harmony import */ var _vendor_phpunit_php_code_coverage_src_Report_Html_Renderer_Template_js_bootstrap_min_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_vendor_phpunit_php_code_coverage_src_Report_Html_Renderer_Template_js_bootstrap_min_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _vendor_phpunit_php_code_coverage_src_Report_Html_Renderer_Template_js_popper_min_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../vendor/phpunit/php-code-coverage/src/Report/Html/Renderer/Template/js/popper.min.js */ "./vendor/phpunit/php-code-coverage/src/Report/Html/Renderer/Template/js/popper.min.js");
+/* harmony import */ var _vendor_phpunit_php_code_coverage_src_Report_Html_Renderer_Template_js_popper_min_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_vendor_phpunit_php_code_coverage_src_Report_Html_Renderer_Template_js_popper_min_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_ExampleComponent_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue");
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -21084,7 +21082,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
-
+ //import './module/jquery'
 
 
 
@@ -21111,7 +21109,7 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bun
 
 (0,vue__WEBPACK_IMPORTED_MODULE_1__.createApp)({
   components: {
-    ExampleComponent: _components_ExampleComponent_vue__WEBPACK_IMPORTED_MODULE_5__.default
+    ExampleComponent: _components_ExampleComponent_vue__WEBPACK_IMPORTED_MODULE_4__.default
   }
 }).mount('#app');
 
@@ -21158,20 +21156,6 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
-
-/***/ }),
-
-/***/ "./resources/js/module/jquery.js":
-/*!***************************************!*\
-  !*** ./resources/js/module/jquery.js ***!
-  \***************************************/
-/***/ (() => {
-
-window.onload = function () {
-  $(window).on('load', function () {
-    alert('hello');
-  });
-};
 
 /***/ }),
 
