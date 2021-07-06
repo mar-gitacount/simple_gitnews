@@ -1,0 +1,15 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+//styles
+@import '../../vendor/phpunit/php-code-coverage/src/Report/Html/Renderer/Template/css/bootstrap.min.css';
+
+a {
+    text-decoration:none; 
+}

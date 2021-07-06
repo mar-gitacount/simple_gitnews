@@ -1,0 +1,105 @@
+ユーザー論理削除フロー
+votingtableテーブルにdelete_atカラムを追加する。「うまくいくかわからない」laravel/uiによってパスワード管理されているので要確認
+
+マイグレーションファイルを作成
+php artisan make:migration add_column_softDeletes_users_table --table --table=users
+
+マイグレーションファイルを下記のように編集する。
+up関数とdown関数に追記する。
+
+<?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class AddColumnSoftDeletesUsersTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::table('users', function (Blueprint $table) {
+            //下記を追加
+            $table->softDeletes();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::table('users', function (Blueprint $table) {
+            //下記を追加
+            $table->dropColumn('deleted_at');
+        });
+    }
+}
+
+up関数に$table->softDeletes();
+を追加すると、deleate_atカラムをvotingsテーブルに追加できる。
+このdeleted_atカラムにおいて論理削除のON/OFFを切り替えます。
+
+php artisan migrate
+
+
+userモデルの編集
+ModelクラスとSoftDeketesクラスを利用することができる。
+User.php
+
+<?php
+
+namespace App;
+
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+
+//追記
+use Illuminate\Database\Eloquent\Model;
+//追記
+use Illuminate\Database\Eloquent\SoftDeletes;
+
+
+class User extends Authenticatable
+{
+    use Notifiable;
+
+    //追記
+    use SoftDeletes;
+
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'name', 'email', 'password',
+    ];
+
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'password', 'remember_token',
+    ];
+
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+    ];
+}
+

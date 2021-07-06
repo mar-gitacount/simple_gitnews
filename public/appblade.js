@@ -1,0 +1,3 @@
+$(function(){
+    $('#voting-name').focus();
+});

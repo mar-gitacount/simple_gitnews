@@ -1,0 +1,19 @@
+/* 全て */
+.home_pic{
+    border-radius: 50%;
+}
+/* PCレイアウト */
+/* スマホレイアウト */
+
+@media screen and(min-width:320px) and (max-width:519px) {
+    .home_profile_wrap{
+        display: flex;
+        color: red;
+    }
+    
+    .home_my_profile_info{
+        width: 50%;
+    }
+}
+
+

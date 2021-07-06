@@ -1,0 +1,19 @@
+Starting Laravel development server: http://127.0.0.1:8000
+[Sat Dec 19 15:30:04 2020] PHP 8.0.0 Development Server (http://127.0.0.1:8000) started
+[Sat Dec 19 15:30:44 2020] 127.0.0.1:62946 Accepted
+[Sat Dec 19 15:30:45 2020] 127.0.0.1:62946 Closing
+[Sat Dec 19 15:30:45 2020] 127.0.0.1:62948 Accepted
+[Sat Dec 19 15:30:45 2020] 127.0.0.1:62948 Closing
+[Sat Dec 19 15:30:45 2020] 127.0.0.1:62949 Accepted
+[Sat Dec 19 15:30:45 2020] 127.0.0.1:62949 Closing
+[Sat Dec 19 15:30:45 2020] 127.0.0.1:62951 Accepted
+[Sat Dec 19 15:30:45 2020] 127.0.0.1:62951 [200]: GET /favicon.ico
+[Sat Dec 19 15:30:45 2020] 127.0.0.1:62951 Closing
+[Sat Dec 19 15:30:54 2020] 127.0.0.1:62959 Accepted
+[Sat Dec 19 15:30:55 2020] 127.0.0.1:62959 Closing
+[Sat Dec 19 15:30:55 2020] 127.0.0.1:62960 Accepted
+[Sat Dec 19 15:30:55 2020] 127.0.0.1:62960 Closing
+[Sat Dec 19 15:30:55 2020] 127.0.0.1:62961 Accepted
+[Sat Dec 19 15:30:55 2020] 127.0.0.1:62961 Closing
+[Sat Dec 19 15:30:55 2020] 127.0.0.1:62962 Accepted
+[Sat Dec 19 15:30:56 2020] 127.0.0.1:62962 Closing

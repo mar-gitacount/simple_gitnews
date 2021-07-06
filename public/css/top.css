@@ -1,0 +1,13 @@
+.gunle_wrap{
+    display: flex;
+    justify-content: space-between;
+}
+
+.gunle_wrap a,.table-text{
+    color: #000000;
+}
+
+
+a{
+    text-decoration:none; 
+}
