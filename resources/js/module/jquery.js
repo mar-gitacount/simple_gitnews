@@ -1,7 +1,6 @@
-$(function () {
-    //Jquryや通常のjavascript
-    $(window).on('load', () => {
-        alert('hellohello');
-    });
-});
 
+window.onload = function () {
+    $(window).on('load', () => {
+        alert('hello');
+    });
+};
