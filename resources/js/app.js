@@ -8,7 +8,7 @@ require('./bootstrap');
 import 'bootstrap';
 window.Vue = require('vue')
 import { createApp } from 'vue'
-//import './module/jquery'
+import './module/jquery'
 import '../../vendor/phpunit/php-code-coverage/src/Report/Html/Renderer/Template/js/bootstrap.min.js'
 import '../../vendor/phpunit/php-code-coverage/src/Report/Html/Renderer/Template/js/popper.min.js'
 
