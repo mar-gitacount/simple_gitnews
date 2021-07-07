@@ -21,15 +21,16 @@ use App\Http\Controllers\ArticleController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 /**
  * '/'にアクセスしたらvotingsを表示する処理。
-  */
+ */
 /*  Route::get('/', function () { 
     $votings = Voting::all();
     return view('votings', ['votings' => $votings]);
 });  */
 
-Route::resource('/',VotingController::class);
+Route::resource('/', VotingController::class);
 /* ログインするとトップページにいくこれをつかってマイページいける処理を書く */
 /**
  * votingページにarticleの全てのページを並べる。
@@ -59,7 +60,7 @@ Route::resource('/',VotingController::class);
 
 //ページネーションのルーティング
 
-Route::delete('/voting/{voting}',function(Voting $voting){
+Route::delete('/voting/{voting}', function (Voting $voting) {
     $voting->delete();
     /*トップページに置く*/
     return redirect('/');
@@ -73,24 +74,24 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 /**
  * {}の中はコントローラの引数か
  */
-Route::get('/home/user_manegement',[App\Http\Controllers\UserController::class,'index'])->name('user_manegemet');
+Route::get('/home/user_manegement', [App\Http\Controllers\UserController::class, 'index'])->name('user_manegemet');
 
-Route::post('/user_manegement',[App\Http\Controllers\UserController::class,'update'])->name('update');
+Route::post('/user_manegement', [App\Http\Controllers\UserController::class, 'update'])->name('update');
 
-Route::delete('/home',[App\Http\Controllers\UserController::class, 'destroy'])->name('user_delete')->middleware('auth');
-Auth::routes();
+Route::delete('/home', [App\Http\Controllers\UserController::class, 'destroy'])->name('user_delete')->middleware('auth');
+//Auth::routes();
 /** 
  *  第一引数のuriにarticle.blade.phpを入れている。
  * ここでarticleの各投稿ページのURLを生成する。
  * */
-Route::get('/home/article','App\Http\Controllers\ArticleController@article')->name('article')->middleware('auth');
+Route::get('/home/article', 'App\Http\Controllers\ArticleController@article')->name('article')->middleware('auth');
 Route::post('/home/article',  [App\Http\Controllers\ArticleController::class, 'store'])->name('articlepost');
 
 Route::post('/article_update_page_show', [App\Http\Controllers\ArticleController::class, 'update'])->name('article_update');
 
-Route::get('/home/article_update_page_show/{id}',[App\Http\Controllers\ArticleController::class, 'article_update_page_show'])
-->name('article_update_page_show')->middleware('auth');
-Route::delete('/home/article','App\Http\Controllers\ArticleController@delete')->name('article_delete');
+Route::get('/home/article_update_page_show/{id}', [App\Http\Controllers\ArticleController::class, 'article_update_page_show'])
+    ->name('article_update_page_show')->middleware('auth');
+Route::delete('/home/article', 'App\Http\Controllers\ArticleController@delete')->name('article_delete');
 /**article/{id}に接続したとき、ArticleControllerのshowメソッドを呼び出す。{id}のブレードファイルに接続する。*/
 Route::get('/articleview/{id}', [App\Http\Controllers\ArticleController::class, 'show'])->name('article_display');
 
@@ -100,6 +101,6 @@ Route::post("/articleview/{article_id_number}", 'App\Http\Controllers\ArticleCon
 
 
 //検索結果を返すコントローラへのルーティング
-Route::get("/search",'App\Http\Controllers\ArticleController@article_search')->name('search');
+Route::get("/search", 'App\Http\Controllers\ArticleController@article_search')->name('search');
 //ジャンル事のページ設定
-Route::get("/gunle/{gunle_num}",'App\Http\Controllers\ArticleController@article_gunle_page_show')->name('gunle');
+Route::get("/gunle/{gunle_num}", 'App\Http\Controllers\ArticleController@article_gunle_page_show')->name('gunle');
