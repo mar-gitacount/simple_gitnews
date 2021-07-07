@@ -79,7 +79,7 @@ Route::get('/home/user_manegement', [App\Http\Controllers\UserController::class,
 Route::post('/user_manegement', [App\Http\Controllers\UserController::class, 'update'])->name('update');
 
 Route::delete('/home', [App\Http\Controllers\UserController::class, 'destroy'])->name('user_delete')->middleware('auth');
-//Auth::routes();
+Auth::routes();
 /** 
  *  第一引数のuriにarticle.blade.phpを入れている。
  * ここでarticleの各投稿ページのURLを生成する。
