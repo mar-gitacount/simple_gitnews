@@ -4,12 +4,12 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/top.css') }}">
 </head> --}}
 <div class="container">
-    <div class="col-sm-offset-2 col-sm-8">
+    <div class="col-sm-10 main_items">
         <!-- 記事一覧 -->
         <!-- 以下の変数を置き換える検索を押したらserch_resultにする -->
         @if (count($articles)>0)
         <div class="panel-body">
-            <div class="panel-heading">
+            <div class="panel-heading article_top">
                 記事一覧
             </div>
             @inject('gunle', 'App\developer_functions\Article_functions')
@@ -29,24 +29,12 @@
                         <div class="gunle"><a href = "{{route('gunle', ['gunle_num' =>  $index  ])}}"><?php echo $item?></a></div> 
                         <?php endforeach;?>
                     </div>
-                    <div id="app">
+                    {{-- <div id="app">
                         <example-component></example-component>
-                    </div>
+                    </div> --}}
             </div>
             <div class="panel-body">
                 <table class="table table-striped task-table">
-                        <thead>
-                        <th>記事</th>
-                        <th>&nbsp;</th>
-                        {{-- <th>
-                        <form method="get" action="{{ route ('search')}}">
-                        {{ csrf_field() }}
-                        <input type="text" name="input" value="">
-                        <input type="submit" value="検索">
-                        </form>
-                        </th> --}}
-                        <th>&nbsp;</th>
-                        </thead>
                         <tbody>
                         @foreach ($articles as $article)
                         　　@csrf

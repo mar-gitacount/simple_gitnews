@@ -1,0 +1,22 @@
+a  {
+    text-decoration:none; 
+    color: black;
+}
+
+.main_items{
+    margin:auto;
+}
+
+.article_top{
+    text-align: center;
+}
+
+// ジャンルをflexbox
+.gunle_wrap{
+    display: flex;
+    justify-content: space-between;
+}
+
+.gunle:hover{
+    color : red;
+}

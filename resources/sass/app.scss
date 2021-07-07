@@ -10,6 +10,6 @@
 //styles
 @import '../../vendor/phpunit/php-code-coverage/src/Report/Html/Renderer/Template/css/bootstrap.min.css';
 
-a {
-    text-decoration:none; 
-}
+//base
+@import 'base';
+
